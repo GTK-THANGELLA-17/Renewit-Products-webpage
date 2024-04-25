@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RenewIt - Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Reset and Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #3f51b5;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a i {
+            margin-right: 5px;
+        }
+
+        nav ul li a:hover {
+            background: #536dfe;
+        }
+
+        main {
+            padding-bottom: 60px; /* Adjust footer space */
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        footer ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        footer ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #536dfe;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            z-index: 9999;
+            display: none;
+        }
+
+        .popup h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .popup p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .popup button {
+            padding: 10px 20px;
+            background-color: #536dfe;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup button:hover {
+            background-color: #3f51b5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to RenewIt</h1>
+            <p>Where old products find new homes!</p>
+            <nav>
+                <ul>
+                    <li><a href="https://gtk-thangella-17.github.io/Renewit-Post-A-Product-webpage/" target="_blank">Post a Product</a></li>
+                    <!-- Changed the link to GitHub -->
+                    <li><a href="#browse">Browse Products</a></li>
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#signup">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="products">
+            <div class="container">
+                <h2>Products</h2>
+                <div id="product-list">
+                    <!-- Product cards will be dynamically added here -->
+                    <div class="product-card" onclick="showPopup('Product Name ')">
+                        <h3><i class="fas fa-tag"></i> Sont tv 32 inch</h3>
+                        <p><i class="fas fa-file-alt"></i> Description: i want to give the tv for the person who need it </p>
+                        <p><i class="fas fa-user"></i> Owner Name: anil</p>
+                        <p><i class="fas fa-phone"></i> Owner Number: ****464957</p>
+                        <p><i class="fas fa-envelope"></i> Email Address: ****@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Location Address: ****Hyderadad , India</p>
+                    </div>
+                   <div class="product-card" onclick="showPopup('Product Name ')">
+                        <h3><i class="fas fa-tag"></i> Fridge samsung </h3>
+                        <p><i class="fas fa-file-alt"></i> Description: i want to give the tv for the person who need it </p>
+                        <p><i class="fas fa-user"></i> Owner Name: anil</p>
+                        <p><i class="fas fa-phone"></i> Owner Number: ****464957</p>
+                        <p><i class="fas fa-envelope"></i> Email Address: ****@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Location Address: ****Hyderadad , India</p>
+                    </div>
+
+
+ <div class="product-card" onclick="showPopup('Product Name ')">
+                        <h3><i class="fas fa-tag"></i> Washing Machine 10kg panasonic</h3>
+                        <p><i class="fas fa-file-alt"></i> Description: i want to give the tv for the person who need it </p>
+                        <p><i class="fas fa-user"></i> Owner Name: Prakash</p>
+                        <p><i class="fas fa-phone"></i> Owner Number: ****464957</p>
+                        <p><i class="fas fa-envelope"></i> Email Address: ****@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Location Address: ****Hyderadad , India</p>
+                    </div>
+
+
+                    <!-- Add more product cards as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="popup" id="popup">
+        <h2>Product Details</h2>
+        <p>If You Want This Product Click On Send Details You Will Be Redirect To Mail Their Give Your Details Name ,Number ,Address Send The Mail With your Gmail Address And We Will Contact You And Verify And Give The Owner Details.</p>
+        <button onclick="redirectToMail()">Send Details</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function showPopup(productName) {
+            $('#popup').fadeIn();
+            // You can add specific details related to the product here if needed
+        }
+
+        function redirectToMail() {
+            $('#popup').fadeOut(); // Close the popup
+            let mailtoLink = `mailto:imgtk17@gmail.com?subject=Interested in your product&body=Please send me more details about your product.`;
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
